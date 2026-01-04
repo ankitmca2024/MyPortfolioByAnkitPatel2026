@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class'
+        }
+    </script>
+
+</head>
+
+<body class="bg-gray-100 dark:bg-gray-900 dark:text-white">
+
+    <!-- ================= NAVBAR ================= -->
+    <nav id="navbar"
+        class="fixed top-0 w-full bg-white/90 dark:bg-gray-900/90 backdrop-blur shadow-sm z-50 transition-all">
+
+        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+
+            <!-- Logo -->
+            <h1 class="text-2xl font-bold text-blue-600">
+                My<span class="text-gray-800 dark:text-white">Portfolio</span>
+            </h1>
+
+            <!-- Desktop Menu -->
+            <ul class="hidden md:flex space-x-8 font-medium">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#certificates" class="nav-link">Certificates</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <!-- Right Buttons -->
+            <div class="flex items-center gap-4">
+                <button id="themeToggle" class="text-xl hover:scale-110 transition" aria-label="Toggle Theme">
+                    🌙
+                </button>
+
+                <button id="menuBtn" class="md:hidden text-3xl focus:outline-none" aria-label="Open Menu">
+                    ☰
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="md:hidden hidden bg-white dark:bg-gray-900 px-6 pb-4 flex flex-col items-center justify-center space-y-2 animate-slideDown">
+            <a href="#home" class="mobile-link">Home</a>
+            <a href="#education" class="mobile-link">Education</a>
+            <a href="#skills" class="mobile-link">Skills</a>
+            <a href="#projects" class="mobile-link">Projects</a>
+            <a href="#certificates" class="mobile-link">Certificates</a>
+            <a href="#contact" class="mobile-link">Contact</a>
+        </div>
+    </nav>
+
+
+    <!-- ================= HERO ================= -->
+    <section id="home" class="pt-24 bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
+        <div class="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-10 items-center">
+            <div>
+                <h1 class="text-4xl font-bold mb-4">Hi, I'm Ankit Patel</h1>
+                <p class="mb-4 text-lg">
+                    <span id="typing"></span>
+                </p>
+                <p class="text-sm md:text-base mb-6 leading-relaxed">I’m Ankit Patel, an MCA student at United
+                    University, passionate about Full-Stack Web Development,
+                    Data Science, and Data Analytics. I am skilled in HTML, CSS, JavaScript, React.js, Bootstrap,
+                    Tailwind CSS,
+                    PHP, Python, Oracle, Power BI, and SQL. I have a strong foundation in both front-end and back-end
+                    technologies,
+                    and I enjoy building responsive, dynamic web applications and creating modern digital solutions.</p>
+                <a href="#contact" class="bg-white text-blue-600 px-6 py-3 rounded">Hire Me</a>
+                <a href="Ankit Patel Professional Resume ATS.pdf" download
+                    class="ml-4 bg-transparent border border-white px-6 py-3 rounded hover:bg-white hover:text-blue-600">
+                    Download Resume
+                </a>
+            </div>
+            <img src="Ankit4.jpg" loading="lazy" class="rounded-xl mx-auto w-64 md:w-96 object-cover drop-shadow-2xl"
+                alt="Ankit Patel">
+
+        </div>
+
+    </section>
+
+    <!-- ================= EDUCATION ================= -->
+    <section id="education" class="py-20 bg-gray-50 dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-6">
+
+            <!-- Section Heading -->
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-14">
+                Education
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+                <!-- Image -->
+                <img src="lib1.jpeg" alt="Education" loading="lazy"
+                    class="rounded-2xl shadow-lg hover:scale-105 transition duration-500 mx-auto" />
+
+                <!-- Education Cards -->
+                <div class="space-y-10">
+
+                    <!-- PG -->
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow
+                 hover:-translate-y-2 hover:shadow-xl transition duration-300 border-l-4 border-blue-600">
+
+                        <h4 class="text-sm text-blue-600 font-semibold mb-1">POST GRADUATION (PG)</h4>
+                        <h3 class="text-xl font-bold mb-1">Master of Computer Applications (MCA)</h3>
+                        <p class="font-medium">United University, Prayagraj</p>
+                        <p class="text-gray-500 dark:text-gray-400 text-sm">2024 – 2026</p>
+
+                        <div class="mt-3 text-sm grid grid-cols-2 gap-2">
+                            <p><span class="font-semibold">Percentage:</span> 76%</p>
+                            <p><span class="font-semibold">Division:</span> First</p>
+                        </div>
+                    </div>
+
+                    <!-- UG -->
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow
+                 hover:-translate-y-2 hover:shadow-xl transition duration-300 border-l-4 border-indigo-600">
+
+                        <h4 class="text-sm text-indigo-600 font-semibold mb-1">UNDER GRADUATION (UG)</h4>
+                        <h3 class="text-xl font-bold mb-1">Bachelor of Arts (BA)</h3>
+                        <p class="font-medium">University of Allahabad, Prayagraj</p>
+                        <p class="text-gray-500 dark:text-gray-400 text-sm">2020 – 2023</p>
+
+                        <div class="mt-3 text-sm grid grid-cols-2 gap-2">
+                            <p><span class="font-semibold">Percentage:</span> 69%</p>
+                            <p><span class="font-semibold">Division:</span> First</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================= SKILLS ================= -->
+    <section id="skills" class="py-20 bg-white dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+
+            <!-- Image -->
+            <img src="https://images.unsplash.com/photo-1517433456452-f9633a875f6f" alt="Skills"
+                class="rounded-xl shadow-lg hover:scale-105 transition duration-500 mx-auto" loading="lazy">
+
+            <!-- Skills Content -->
+            <div>
+                <h2 class="text-3xl font-bold mb-8 text-center md:text-left">Skills</h2>
+
+                <!-- Skill Item -->
+                <div class="mb-5 group">
+                    <p class="mb-1 font-medium">HTML</p>
+                    <div class="bg-gray-300 dark:bg-gray-700 rounded h-4 overflow-hidden">
+                        <div class="skill-bar h-4 bg-blue-600 rounded w-0 text-xs text-white text-right pr-2
+                   transition-all duration-1000 group-hover:bg-blue-500" data-width="90%">90%</div>
+                    </div>
+                </div>
+
+                <div class="mb-5 group">
+                    <p class="mb-1 font-medium">Tailwind CSS</p>
+                    <div class="bg-gray-300 dark:bg-gray-700 rounded h-4 overflow-hidden">
+                        <div class="skill-bar h-4 bg-indigo-600 rounded w-0 text-xs text-white text-right pr-2
+                      transition-all duration-1000 group-hover:bg-indigo-500" data-width="85%">65%</div>
+                    </div>
+                </div>
+
+                <div class="mb-5 group">
+                    <p class="mb-1 font-medium">JavaScript</p>
+                    <div class="bg-gray-300 dark:bg-gray-700 rounded h-4 overflow-hidden">
+                        <div class="skill-bar h-4 bg-yellow-500 rounded w-0 text-xs text-white text-right pr-2
+                      transition-all duration-1000 group-hover:bg-yellow-400" data-width="80%">60%</div>
+                    </div>
+                </div>
+
+                <div class="mb-5 group">
+                    <p class="mb-1 font-medium">React</p>
+                    <div class="bg-gray-300 dark:bg-gray-700 rounded h-4 overflow-hidden">
+                        <div class="skill-bar h-4 bg-cyan-600 rounded w-0 text-xs text-white text-right pr-2
+                      transition-all duration-1000 group-hover:bg-cyan-500" data-width="75%">65%</div>
+                    </div>
+                </div>
+
+                <div class="mb-5 group">
+                    <p class="mb-1 font-medium">Python</p>
+                    <div class="bg-gray-300 dark:bg-gray-700 rounded h-4 overflow-hidden">
+                        <div class="skill-bar h-4 bg-green-600 rounded w-0 text-xs text-white text-right pr-2
+                      transition-all duration-1000 group-hover:bg-green-500" data-width="70%">75%</div>
+                    </div>
+                </div>
+
+                <div class="mb-5 group">
+                    <p class="mb-1 font-medium">Oracle SQL</p>
+                    <div class="bg-gray-300 dark:bg-gray-700 rounded h-4 overflow-hidden">
+                        <div class="skill-bar h-4 bg-purple-600 rounded w-0 text-xs text-white text-right pr-2
+                      transition-all duration-1000 group-hover:bg-purple-500" data-width="70%">75%</div>
+                    </div>
+                </div>
+
+                <div class="mb-5 group">
+                    <p class="mb-1 font-medium">Power BI</p>
+                    <div class="bg-gray-300 dark:bg-gray-700 rounded h-4 overflow-hidden">
+                        <div class="skill-bar h-4 bg-orange-600 rounded w-0 text-xs text-white text-right pr-2
+                      transition-all duration-1000 group-hover:bg-orange-500" data-width="65%">65%</div>
+                    </div>
+                </div>
+
+                <div class="mb-5 group">
+                    <p class="mb-1 font-medium">MySQL</p>
+                    <div class="bg-gray-300 dark:bg-gray-700 rounded h-4 overflow-hidden">
+                        <div class="skill-bar h-4 bg-red-600 rounded w-0 text-xs text-white text-right pr-2
+                      transition-all duration-1000 group-hover:bg-red-500" data-width="70%">75%</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= PROJECTS ================= -->
+    <section id="projects" class="py-20 bg-gray-50 dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-6">
+
+            <!-- Section Title -->
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">
+                Projects
+            </h2>
+
+            <!-- Projects Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Project Card -->
+                <div class="group relative rounded-xl overflow-hidden shadow-lg">
+                    <img src="output_7_0.png" alt="Project" loading="lazy" class="w-full h-60 object-cover
+                    group-hover:scale-110 transition duration-500">
+
+                    <!-- Overlay -->
+                    <div class="absolute inset-0 bg-black/70 opacity-0
+                    group-hover:opacity-100 transition duration-300
+                    flex flex-col justify-center items-center text-white text-center p-4">
+                        <h3 class="text-lg font-bold mb-2">Data Analytics Pie Plot</h3>
+                        <p class="text-sm mb-3">Python Library</p>
+                        <button onclick="openModal(this)" data-img="output_7_0.png"
+                            class="px-4 py-2 bg-blue-600 rounded hover:bg-blue-700">
+                            View Project
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Duplicate cards (change titles if you want) -->
+                <div class="group relative rounded-xl overflow-hidden shadow-lg">
+                    <img src="output_12_0.png"
+                        class="w-full h-60 object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition duration-300
+                    flex flex-col justify-center items-center text-white text-center p-4">
+                        <h3 class="text-lg font-bold mb-2">Linear + Pie + Bar + Whiskey Plot</h3>
+                        <p class="text-sm mb-3">Python Library (Matplotlib)</p>
+                        <button onclick="openModal(this)" data-img="output_12_0.png"
+                            class="px-4 py-2 bg-blue-600 rounded">View Project</button>
+                    </div>
+                </div>
+
+                <div class="group relative rounded-xl overflow-hidden shadow-lg">
+                    <img src="output_11_0.png"
+                        class="w-full h-60 object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition duration-300
+                    flex flex-col justify-center items-center text-white text-center p-4">
+                        <h3 class="text-lg font-bold mb-2">Scatter Plot</h3>
+                        <p class="text-sm mb-3">Matplotlib</p>
+                        <button onclick="openModal(this)" data-img="output_11_0.png"
+                            class="px-4 py-2 bg-blue-600 rounded">View Project</button>
+                    </div>
+                </div>
+
+                <!-- Repeat same pattern -->
+                <div class="group relative rounded-xl overflow-hidden shadow-lg">
+                    <img src="p3.png" class="w-full h-60 object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition duration-300
+                    flex flex-col justify-center items-center text-white p-4">
+                        <h3 class="font-bold">Signup Page</h3>
+                        <button onclick="openModal(this)" data-img="p3.png"
+                            class="mt-3 px-4 py-2 bg-blue-600 rounded">View</button>
+                    </div>
+                </div>
+
+                <div class="group relative rounded-xl overflow-hidden shadow-lg">
+                    <img src="p4.png" class="w-full h-60 object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition duration-300
+                    flex flex-col justify-center items-center text-white p-4">
+                        <h3 class="font-bold">Login Page</h3>
+                        <button onclick="openModal(this)" data-img="p4.png"
+                            class="px-4 py-2 bg-blue-600 text-white rounded">View</button>
+                    </div>
+                </div>
+
+                <div class="group relative rounded-xl overflow-hidden shadow-lg">
+                    <img src="p5.png" class="w-full h-60 object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition duration-300
+                    flex flex-col justify-center items-center text-white p-4">
+                        <h3 class="font-bold">Pie Ploting</h3>
+                        <button onclick="openModal(this)" data-img="p5.png"
+                            class="px-4 py-2 bg-blue-600 text-white rounded">View</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- PROJECT MODAL -->
+    <div id="projectModal" class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50">
+        <div class="relative max-w-3xl w-full p-4">
+            <button onclick="closeModal()"
+                class="absolute top-2 right-2 text-red-800 font-bold text-3xl">&times;</button>
+            <img id="modalImg" class="w-full rounded-xl">
+        </div>
+    </div>
+
+    <!-- ================= CERTIFICATES ================= -->
+    <section id="certificates" class="py-20 bg-white dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-6">
+
+            <!-- Section Title -->
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+                Certificates & Achievements
+            </h2>
+
+            <!-- Certificates Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Certificate Card -->
+                <div class="group relative rounded-xl overflow-hidden shadow-lg">
+                    <img src="CERT1.jpeg" loading="lazy" alt="Certificate" class="w-full h-64 object-cover
+                    group-hover:scale-110 transition duration-500">
+
+                    <!-- Overlay -->
+                    <div class="absolute inset-0 bg-black/70 opacity-0
+                    group-hover:opacity-100 transition duration-300
+                    flex flex-col justify-center items-center text-white text-center p-4">
+                        <h3 class="text-lg font-bold mb-2">Professional Certificate</h3>
+                        <button onclick="openCertModal(this)" data-img="CERT1.jpeg"
+                            class="px-4 py-2 bg-blue-600 rounded hover:bg-blue-700">
+                            View Certificate
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Repeat Cards -->
+                <div class="group relative rounded-xl overflow-hidden shadow-lg">
+                    <img src="CERT2.jpeg" loading="lazy"
+                        class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition duration-300
+                    flex justify-center items-center">
+                        <button onclick="openCertModal(this)" data-img="CERT2.jpeg"
+                            class="px-4 py-2 bg-blue-600 text-white rounded">
+                            View
+                        </button>
+                    </div>
+                </div>
+
+                <div class="group relative rounded-xl overflow-hidden shadow-lg">
+                    <img src="CERT3.jpeg" loading="lazy"
+                        class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition duration-300
+                    flex justify-center items-center">
+                        <button onclick="openCertModal(this)" data-img="CERT3.jpeg"
+                            class="px-4 py-2 bg-blue-600 text-white rounded">
+                            View
+                        </button>
+                    </div>
+                </div>
+
+                <div class="group relative rounded-xl overflow-hidden shadow-lg">
+                    <img src="CERT4.jpeg" loading="lazy"
+                        class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition duration-300
+                    flex justify-center items-center">
+                        <button onclick="openCertModal(this)" data-img="CERT4.jpeg"
+                            class="px-4 py-2 bg-blue-600 text-white rounded">
+                            View
+                        </button>
+                    </div>
+                </div>
+
+                <div class="group relative rounded-xl overflow-hidden shadow-lg">
+                    <img src="CERT5.jpeg" loading="lazy"
+                        class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition duration-300
+                    flex justify-center items-center">
+                        <button onclick="openCertModal(this)" data-img="CERT5.jpeg"
+                            class="px-4 py-2 bg-blue-600 text-white rounded">
+                            View
+                        </button>
+                    </div>
+                </div>
+
+                <div class="group relative rounded-xl overflow-hidden shadow-lg">
+                    <img src="CERT6.jpeg" loading="lazy"
+                        class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition duration-300
+                    flex justify-center items-center">
+                        <button onclick="openCertModal(this)" data-img="CERT6.jpeg"
+                            class="px-4 py-2 bg-blue-600 text-white rounded">
+                            View
+                        </button>
+                    </div>
+                </div>
+
+                <div class="group relative rounded-xl overflow-hidden shadow-lg">
+                    <img src="ANKIT INTERNSHIP.jpg" loading="lazy"
+                        class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition duration-300
+                    flex justify-center items-center">
+                        <button onclick="openCertModal(this)" data-img="ANKIT INTERNSHIP.jpg"
+                            class="px-4 py-2 bg-blue-600 text-white rounded">
+                            View
+                        </button>
+                    </div>
+                </div>
+
+                <div class="group relative rounded-xl overflow-hidden shadow-lg">
+                    <img src="Data Analytics.png" loading="lazy"
+                        class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition duration-300
+                    flex justify-center items-center">
+                        <button onclick="openCertModal(this)" data-img="Data Analytics.png"
+                            class="px-4 py-2 bg-blue-600 text-white rounded">
+                            View
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CERTIFICATE MODAL -->
+    <div id="certModal" class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50">
+        <div class="relative max-w-4xl w-full p-4">
+            <button onclick="closeCertModal()"
+                class="absolute top-2 right-2 text-red-800 font-bold text-3xl">&times;</button>
+            <img id="certImg" class="w-full rounded-xl">
+        </div>
+    </div>
+
+
+    <!-- ================= CONTACT ================= -->
+    <section id="contact" class="py-20 bg-gray-50 dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-6">
+
+            <!-- Section Title -->
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-14">
+                Get In Touch
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+                <!-- Contact Info -->
+                <div class="space-y-6">
+                    <p class="text-lg leading-relaxed">
+                        Have a project in mind, internship opportunity, or want to collaborate?
+                        Feel free to reach out — I usually respond within 24 hours.
+                    </p>
+
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4">
+                            <span class="text-blue-600 text-xl">📧</span>
+                            <p>apuumca2024@gmail.com</p>
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <span class="text-blue-600 text-xl">📞</span>
+                            <p>+91 7754026903</p>
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <span class="text-blue-600 text-xl">📍</span>
+                            <p>Prayagraj, Uttar Pradesh</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-6 pt-4">
+                        <a href="https://www.linkedin.com/in/ankit-patel-156986260" target="_blank"
+                            class="text-blue-600 hover:underline">
+                            LinkedIn
+                        </a>
+                        <a href="https://github.com/ankitmca2024" target="_blank" class="text-blue-600 hover:underline">
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <form id="contactForm" class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg space-y-5">
+
+                    <div>
+                        <label class="text-sm font-medium">Full Name</label>
+                        <input type="text" name="name" required class="w-full mt-1 p-3 border rounded focus:ring-2 focus:ring-blue-600 outline-none
+                        dark:bg-gray-700 dark:border-gray-600">
+                    </div>
+
+                    <div>
+                        <label class="text-sm font-medium">Email Address</label>
+                        <input type="email" name="email" required class="w-full mt-1 p-3 border rounded focus:ring-2 focus:ring-blue-600 outline-none
+                        dark:bg-gray-700 dark:border-gray-600">
+                    </div>
+
+                    <div>
+                        <label class="text-sm font-medium">Message</label>
+                        <textarea name="message" rows="4" required class="w-full mt-1 p-3 border rounded focus:ring-2 focus:ring-blue-600 outline-none
+                           dark:bg-gray-700 dark:border-gray-600"></textarea>
+                    </div>
+
+                    <button id="sendBtn" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold
+                       hover:bg-blue-700 transition duration-300">
+                        Send Message
+                    </button>
+
+                    <p id="status" class="text-center text-sm font-medium mt-2"></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-gray-900 text-gray-300">
+        <div class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-10 text-center md:text-left">
+
+            <!-- About -->
+            <div>
+                <h3 class="text-xl font-semibold text-white mb-4">Ankit Patel</h3>
+                <p class="text-sm leading-relaxed">
+                    MCA student and aspiring Full-Stack Web Developer with a strong interest
+                    in Data Analytics and building modern, responsive web applications.
+                </p>
+            </div>
+
+            <!-- Contact Info -->
+            <div>
+                <h3 class="text-xl font-semibold text-white mb-4">Contact</h3>
+                <ul class="space-y-2 text-sm">
+                    <li class="hover:text-white transition">📍 Prayagraj, Uttar Pradesh</li>
+                    <li>
+                        <a href="mailto:apuumca2024@gmail.com" class="hover:text-white transition">
+                            📧 apuumca2024@gmail.com
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tel:+917754026903" class="hover:text-white transition">
+                            ☎ +91 7754026903
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Social Links -->
+            <div>
+                <h3 class="text-xl font-semibold text-white mb-4">Connect</h3>
+                <div class="flex md:justify-start justify-center gap-6 text-lg">
+                    <a href="https://www.linkedin.com/in/ankit-patel-156986260" target="_blank"
+                        class="hover:text-blue-500 transition transform hover:scale-110">
+                        LinkedIn
+                    </a>
+                    <a href="https://github.com/ankitmca2024" target="_blank"
+                        class="hover:text-gray-100 transition transform hover:scale-110">
+                        GitHub
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="border-t border-gray-700 py-4 text-center text-sm">
+            © <span id="year"></span> Ankit Patel. All rights reserved.
+        </div>
+    </footer>
+
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const menuBtn = document.getElementById("menuBtn");
+            const mobileMenu = document.getElementById("mobileMenu");
+            const themeToggle = document.getElementById("themeToggle");
+            const html = document.documentElement;
+            const navbar = document.getElementById("navbar");
+
+            /* ---------------- Mobile Menu Toggle ---------------- */
+            menuBtn.addEventListener("click", () => {
+                mobileMenu.classList.toggle("hidden");
+                menuBtn.textContent =
+                    mobileMenu.classList.contains("hidden") ? "☰" : "✖";
+            });
+
+            /* -------- Close mobile menu on link click -------- */
+            document.querySelectorAll(".mobile-link").forEach(link => {
+                link.addEventListener("click", () => {
+                    mobileMenu.classList.add("hidden");
+                    menuBtn.textContent = "☰";
+                });
+            });
+
+            /* ---------------- Dark Mode (Persisted) ---------------- */
+            if (localStorage.theme === "dark") {
+                html.classList.add("dark");
+                themeToggle.textContent = "☀️";
+            }
+
+            themeToggle.addEventListener("click", () => {
+                html.classList.toggle("dark");
+                const isDark = html.classList.contains("dark");
+                localStorage.theme = isDark ? "dark" : "light";
+                themeToggle.textContent = isDark ? "☀️" : "🌙";
+            });
+
+            /* ---------------- Navbar Shadow on Scroll ---------------- */
+            window.addEventListener("scroll", () => {
+                navbar.classList.toggle("shadow-lg", window.scrollY > 20);
+            });
+
+        });
+
+        /* TYPING EFFECT */
+        const text = "Frontend Developer | Data Analytics | Web Developer";
+        let index = 0;
+        const typing = document.getElementById("typing");
+
+        function typeEffect() {
+            if (index < text.length) {
+                typing.innerHTML += text.charAt(index);
+                index++;
+                setTimeout(typeEffect, 70);
+            }
+        }
+        typeEffect();
+
+        /* SKILL ANIMATION */
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.width = entry.target.dataset.width;
+                }
+            });
+        }, { threshold: 0.6 });
+
+        document.querySelectorAll('.skill-bar').forEach(bar => observer.observe(bar));
+        /* SKILL BAR ANIMATION ON SCROLL */
+        const skillObserver = new IntersectionObserver(
+            entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.width = entry.target.dataset.width;
+                    }
+                });
+            },
+            { threshold: 0.6 }
+        );
+
+        document.querySelectorAll('.skill-bar').forEach(bar => {
+            skillObserver.observe(bar);
+        });
+
+
+        function openModal(btn) {
+            document.getElementById('modalImg').src = btn.dataset.img;
+            document.getElementById('projectModal').classList.remove('hidden');
+            document.getElementById('projectModal').classList.add('flex');
+        }
+
+        function closeModal() {
+            document.getElementById('projectModal').classList.add('hidden');
+        }
+
+
+        function openCertModal(btn) {
+            document.getElementById('certImg').src = btn.dataset.img;
+            document.getElementById('certModal').classList.remove('hidden');
+            document.getElementById('certModal').classList.add('flex');
+        }
+
+        function closeCertModal() {
+            document.getElementById('certModal').classList.add('hidden');
+        }
+
+        // <!-- EmailJS Initialization -->
+        (function () {
+            emailjs.init("z6BNXu2IQn6wB5QtK"); // 🔴 replace with your Public Key
+        })();
+
+        /* EMAILJS */
+        const form = document.getElementById('contactForm');
+        const statusMsg = document.getElementById('status');
+        const sendBtn = document.getElementById('sendBtn');
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            sendBtn.innerText = "Sending...";
+            sendBtn.disabled = true;
+
+            emailjs.sendForm(
+                "service_999pfms",
+                "template_zu0aioq",
+                this
+            ).then(() => {
+                statusMsg.innerText = "Message sent successfully ✅";
+                statusMsg.className = "text-green-600 text-center";
+                sendBtn.innerText = "Send Message";
+                sendBtn.disabled = false;
+                form.reset();
+            }, () => {
+                statusMsg.innerText = "Failed to send message ❌";
+                statusMsg.className = "text-red-600 text-center";
+                sendBtn.innerText = "Send Message";
+                sendBtn.disabled = false;
+            });
+        });
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+</body>
+
+</html>
